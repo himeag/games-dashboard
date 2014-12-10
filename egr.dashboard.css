@@ -1,40 +1,63 @@
-
-/*
- * FONT
- *
- * <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
- * @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800); 
- * 
- */
-
-
+ 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@font-face {
+    font-family: "Egr Dashboard";
+    font-weight: normal;
+    src: url(../icons/games-dashboard.woff);
+}
 html,body {
     height: 100%;
-	line-height:1.25em;
-	font-family: 'Open Sans' sans-serif
 }
 html {
     overflow: hidden;
+    font-size: 16px;
 }
 body {
     overflow-y: scroll;
     font-size: 100%;
+    line-height: 1.25em;
+    font-family: 'Open Sans';
+    font-weight: 400;
 }
 
 /* general style rules */
+.egr-dashboard-icon {
+    font-family: "Egr Dashboard";
+}
+.open-sans-light {
+    font-family: "Open Sans" !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+}
+.open-sans-semibold {
+    font-family: "Open Sans" !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+}
+.open-sans-bold {
+    font-family: "Open Sans" !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+}
+.open-sans-extrabold {
+    font-family: "Open Sans" !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+}
 textarea {
     resize: none;
     width: 100%;
     height: 100% !important;
+    background-color: #FFF;
 }
 .lightBoldText {
-    font-weight: bold;
+    font-weight: normal;
     color: #5D5D5D;
 }
 .lightHeading {
     background-color: #F7F7F7;
     margin: 0;
-    padding: .625em;
+    padding: 10px;
     font-size: 1.2em;
     height: 2.6em;
 }
@@ -48,7 +71,7 @@ textarea {
         vertical-align: middle;
     }
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-.bigIcon { font-size: 1.375em;}
+.bigIcon { font-size: 22px;}
 [stacked-resize] {
     height: 100%;
     position: relative;
@@ -61,7 +84,7 @@ textarea {
     margin-bottom: 0;
 }
     [accordion] .panel-heading {
-        padding: .325em;
+        padding: 5px;
     }
 /*         [accordion] h4.panel-title { */
 /*             font-size: 1em; */
@@ -86,12 +109,12 @@ textarea {
     }
     [accordion] .panel-body {
         background-color: #E3E3E3;
-        padding: .625em;
+        padding: 10px;
     }
 /* end general styles */
 
 div[ng-controller] .well {
-    border-radius: 0;
+    border-radius: 0;  
 }
 .userGroup > .well[scroll-glue="true"],
 #sidebarContainer .well[scroll-glue="true"] {
@@ -120,7 +143,7 @@ div[ng-controller='UserGroups'] #sidebarContainer {
     box-sizing: border-box;
 }
 div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
-    width: 3.125em !important;
+    width: 50px !important;
     float: right;
     height: auto;
 }
@@ -128,7 +151,7 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
         display: none !important;
     }
     div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer .sidebar > .closeSidebar.well:first-child {
-        max-height: 3.125em !important;
+        max-height: 50px !important;
         min-height: 0 !important;
     }
 
@@ -147,6 +170,7 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
         max-height: 100px;
         padding: 5px 10px;
         margin: 0;
+        font-size: .65em;
     }
     #sidebarContainer .mentorRoster {
         margin-bottom: 0 !important;
@@ -162,7 +186,7 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
         overflow-x: hidden;
         border: 1px solid #CCC;
         background-color: #EEE;
-        padding: .3125em;
+        padding: 5px;
         margin: 0;
         width: 25%;
     }
@@ -176,35 +200,34 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
 }
     .userGroup > .well:not(:last-child),
     #sidebarContainer .sidebar > .well:not(.mentorChat):not(:last-child) {
-        margin-bottom: .3125em;
+        margin-bottom: 0;
     }
 .groupRosterWell.well {
     padding: 0;
     margin: 0;
     border: 1px solid #A2B4BF;
 }
-    .groupRosterWell .userGroupName > * {
-        font: normal normal normal bolder 1.1em sans-serif;
+    .groupRosterWell .userGroupName {
         font-size: .85em;
-        font-family: sans-serif;
-        font-weight: bolder;
         color: #CFEBFC;
-        padding: 6px;
-        margin: 0;
         background-color: #2D4759;
     }
+        .groupRosterWell .userGroupName > * {
+            padding: 9px;
+            margin: 0;
+        }
         .groupRosterWell .rosterWell {
             background-color: #2D4759;
         }
             .groupRosterWell .rosterWell .rosterPlayer {
                 color: #A5CDEB;
                 border: 4px;
-                border-top: 4px solid;
+                border-top: 6px solid;
                 border-color: #A5CDEB;
-                font-size: .65em;
-                max-height: 5em;
+                font-size: .5em;
+                max-height: 3em;
                 overflow-y: hidden;
-                font-weight: bolder;
+                font-family: os-bold;
                 padding: 2px;
                 padding-bottom: 4px;
                 display: inline-block;
@@ -232,43 +255,58 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
         .groupRosterWell .taskWell .roomTasks * {
             background-color: #E9F3F8;
             background-image: none;
+            border-radius: 0;
         }
             .groupRosterWell .taskWell .panel-heading {
-                border-radius: none;
+                border-radius: 0;
                 border: none;
                 border-top: 1px solid #FCFEFF;
                 border-bottom: 1px solid #BCCBD6;
-                padding: 0;
+                padding: 3px;
                 margin: 0;
-            }
+            
+                overflow: hidden;
+                font-size: 1.4em;
+                font-weight: 400;
+}
             .groupRosterWell .taskWell .panel-heading h4.panel-title {
-                font-weight: bold;
+font-weight: 400;
+                
                 color: #8697A3;
-                font-size: .75em;
-                text-align: center;
-                padding: 0;
+                font-size: .52em;
+                padding: 5px;
                 margin: 0;
             }
                 .groupRosterWell .taskWell .panel-heading h4.panel-title a {
                     display: table;
+                    width: 100%;
                 }
-                    .groupRosterWell .taskWell .panel-heading h4.panel-title a span > span {
+                    .groupRosterWell .taskWell .panel-heading h4.panel-title a:hover {
+                        text-decoration: none;
+                    }
+                    .groupRosterWell .taskWell .panel-heading h4.panel-title a > span {
+                        display: table-row;
+                    }
+                    .groupRosterWell .taskWell .panel-heading h4.panel-title a > span > span {
                         display: table-cell;
                         vertical-align: middle;
                     }
-                .groupRosterWell .taskWell .panel-heading h4.panel-title .timeDue {
-                    width: 5%;
-                }
-                .groupRosterWell .taskWell .panel-heading h4.panel-title .roomNameSpan {
-                    width: 80%;
-                    overflow: hidden;
-                }
-                .groupRosterWell .taskWell .panel-heading h4.panel-title .opener {
-                    width: 5%;
-                }
-        .taskWell .rooms .noTasks h6 {
-            margin: 0;
-        }
+                        .groupRosterWell .taskWell .panel-heading h4.panel-title .timeDue {
+                            width: 5%;
+                            color: #BCCBD6;
+                        }
+                        .groupRosterWell .taskWell .panel-heading h4.panel-title .roomNameSpan {
+                            width: 80%;
+                            overflow: hidden;
+                            max-height: 2em;
+                        
+                            font-weight: 600;
+                            padding: 2px;
+}
+                        .groupRosterWell .taskWell .panel-heading h4.panel-title .opener {
+                            width: 5%;
+                            color: #BCCBD6;
+                        }
         .groupRosterWell .taskWell .panel-collapse .panel-body {
             padding: 0px;
             border: none;
@@ -276,77 +314,87 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
             .groupRosterWell .taskWell .task {
                 display: inline-block;
                 height: 100%;
-/*                 border: 1px solid #FCFEFF; */
-                border: 1px solid #BCCBD6;
-            }
+                border: none;
+                border-left: 1px solid #BCCBD6;
+                border-right: 1px solid #BCCBD6;
+                padding: 3px;
+                color: #A5CDEB;
+            
+}
+                .groupRosterWell .taskWell .task a i {
+                    color: #A5CDEB;
+                }
+                    .groupRosterWell .taskWell .task.submitted a i {
+                        color: #2D4759;
+                    
+}
+                    .groupRosterWell .taskWell .task.witnessed a i {
+                        color: #D6E4EB;
+                    }
+                .groupRosterWell .taskWell .task:first-child {
+                    border-left: none;
+                }
+                .groupRosterWell .taskWell .task:last-child {
+                    border-right: none;
+                }
 
-/* .usergroupWell { */
-/*     min-height: 2em; */
-/*     max-height: 3em; */
-/* } */
-/* OLD ROSTER: 'templates/roster.html'*/
-/* .rosterWell.well {} */
-/*     .rosterWell .user {} */
-/*         .rosterWell .user a { */
-/*             padding: 0 2px; */
-/*             font-size: .8em; */
-/*             background-color: #EEE; */
-/*             border-color: #EEE #EEE #DDD; */
-/*         } */
-/*             .rosterWell .user.active a { */
-/*                 background-image: linear-gradient(to bottom, #E8E8E8 0px, #F5F5F5 100%); */
-/*             } */
-/*     .rosterWell .table.userInfo { */
-/*         font-size: .8em; */
-/*         text-align: middle; */
-/*     } */
-/*         .rosterWell .table.userInfo td, */
-/*         .rosterWell .table.userInfo th { */
-/*             border-top: 0; */
-/*             padding: 2px; */
-/*         } */
 .assessmentWell {
     text-align: center;
     max-height: 5em;
     min-height: 2em;
 }
-.chatfeedWell.well {
+.userGroup > .chatfeedWell.well {
     min-height: 15%;
+    border: 1px solid #A2B4BF;
+    background-color: #FFF;
+    background-image: none;
 }
     .chat.suggestion-ready {
         background-color: rgba(255, 200, 200, .5);
-        padding-top: .1875em;
-        padding-bottom: .1875em;;
-    }
-    .chat:not(:first-child) {
-        margin-top: .3875em;;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
         .chat > .chatArea {
-            padding-left: .5em;
+            background-color: #FFF;
+            font-size: .85em;
+            color: #2D4759;
+            padding: 5px 15px 25px 15px;
         }
-        .chat .chatTitle {
-            display: inline;
-        }
-        .chat .chatContent {
-            display: inline;
-        }
+            .chat > .chatArea .chatTitle {
+                color: #8DB8D6;
+            }
         .chat .chatInfo {
-            color: #333;
-            padding-right: 5px;
+            color: #2D4759;
+            background-color: #E6E6E6;
+            padding: 3px 15px;
+            font-size: .625em;
         }
-            .chat .chatUser {}
-                .chat .chatUser.mentor {
-                    color: #373;
-                }
-            .chat .chatTime {
-                font-size: .8em;
+            .chat > .chatInfo .midtext {
+                font-size: 1.2em;
+                line-height: 1.2em;
             }
 
-.userGroup .suggestionWell.well {}
+.userGroup .suggestionWell.well {
+    font-size: .65em;
+}
     .userGroup .suggestionWell.well > .table {
         margin: 0;
     }
-.chatinputWell.well {}
+.chatinputWell.well {
+/*     min-height: 36px; */
+/*     height: 36px; */
+/*     max-height: 80px; */
+}
+    .userGroup > .chatinputWell.well textarea.form-control {
+        min-height: 36px !important;
+        height: 36px;
+        max-height: 80px !important;
+        box-sizing: border-box;
+        padding: 4px;
+        font-size: .8em;
+        line-height: 1.25em;
+        overflow-y: visible;
+    }
 .userGroup > :last-child {
     margin-bottom: 0;
 }
@@ -379,12 +427,14 @@ div[ng-controller='UserGroups'].assessmentOpen .reflectionWell {
 div[ng-controller='UserGroups'].assessmentOpen #sidebarContainer .sidebar > .well.closeSidebar, 
 div[ng-controller='UserGroups'].assessmentOpen #sidebarContainer .sidebar > .well.mentorChat {
     display: block;
+    
 }
+
 .assessmentOpen .userGroup > .well {
     min-height: 20px;
 }
     .assessmentOpen .userGroup > .well:not(:last-child) {
-        margin-bottom: .1875em;;
+        margin-bottom: 3px;
     }
 div[ng-controller='UserGroups'].assessmentOpen .groupAssessments {
     display: block;
@@ -400,23 +450,37 @@ div[ng-controller='UserGroups'].assessmentOpen .userGroups {
     overflow-y: auto;
 }
     #assessmentPanel .panel-heading {
-        padding: .3125em .4375em;
+        padding: 5px 7px;
     }
 .assessmentArea {}
     .assessmentArea .assessmentClose {
-        margin-right: -.8125em;
-        margin-top: -1.125em;
+        margin-right: -13px;
+        margin-top: -18px;
     }
     .assessmentArea .infoSection {
-        padding: 0  1.3125em;
+        padding-left: 20px;
+        padding-top: 20px;
     }
         .assessmentArea .infoSection > div:first-child {
             font-weight: bold;
             font-size: 1.2em;
-            margin-bottom: .625em;
+            margin-bottom: 10px;
         }
         .assessmentArea .infoSection > * {}
 #editAndSendTemplate {}
     #editAndSendTemplate .well {
         margin: 0;
     }
+
+
+.userGroup {
+    margin:0 5px;
+}
+
+.rosterPlayers {
+    font-weight:400;
+    
+    font-size: 1.5em;
+    line-height: 70%;
+    padding-bottom: 9px;
+}
