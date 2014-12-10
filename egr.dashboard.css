@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 @font-face {
@@ -5,6 +6,8 @@
     font-weight: normal;
     src: url(../icons/games-dashboard.woff);
 }
+=======
+>>>>>>> parent of 2e9bc50... px > em
 html,body {
     height: 100%;
 }
@@ -14,15 +17,19 @@ html {
 }
 body {
     overflow-y: scroll;
+<<<<<<< HEAD
     font-size: 100%;
     line-height: 1.25em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
     font-weight: 400;
+=======
+    font-size: 12px;
+>>>>>>> parent of 2e9bc50... px > em
 }
 
 /* general style rules */
 .egr-dashboard-icon {
-    font-family: "Egr Dashboard" !important;
+    font-family: "Egr Dashboard";
 }
 .open-sans-light {
     font-family: "Open Sans" !important;
@@ -42,7 +49,7 @@ body {
 .open-sans-extrabold {
     font-family: "Open Sans" !important;
     font-style: normal !important;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
 }
 textarea {
     resize: none;
@@ -51,7 +58,7 @@ textarea {
     background-color: #FFF;
 }
 .lightBoldText {
-    font-weight: bold;
+    font-weight: normal;
     color: #5D5D5D;
 }
 .lightHeading {
@@ -114,7 +121,7 @@ textarea {
 /* end general styles */
 
 div[ng-controller] .well {
-    border-radius: 0;
+    border-radius: 0;  
 }
 .userGroup > .well[scroll-glue="true"],
 #sidebarContainer .well[scroll-glue="true"] {
@@ -197,23 +204,36 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
     position: relative;
     margin: 0;
     padding: 0;
+    line-height: 1em;
 }
     .userGroup > .well:not(:last-child),
     #sidebarContainer .sidebar > .well:not(.mentorChat):not(:last-child) {
+<<<<<<< HEAD
+        margin-bottom: 0;
+=======
         margin-bottom: 5px;
+>>>>>>> parent of 2e9bc50... px > em
     }
 .groupRosterWell.well {
     padding: 0;
     margin: 0;
     border: 1px solid #A2B4BF;
 }
+<<<<<<< HEAD
     .groupRosterWell .userGroupName {
-        font-size: .825em;
+        font-size: .85em;
+=======
+    .groupRosterWell .userGroupName > * {
+        font: normal normal normal bolder 1.1em sans-serif;
+        font-size: 1.1em;
+        font-family: sans-serif;
+        font-weight: bolder;
+>>>>>>> parent of 2e9bc50... px > em
         color: #CFEBFC;
         background-color: #2D4759;
     }
         .groupRosterWell .userGroupName > * {
-            padding: 6px;
+            padding: 9px;
             margin: 0;
         }
         .groupRosterWell .rosterWell {
@@ -222,12 +242,17 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
             .groupRosterWell .rosterWell .rosterPlayer {
                 color: #A5CDEB;
                 border: 4px;
-                border-top: 4px solid;
+                border-top: 6px solid;
                 border-color: #A5CDEB;
                 font-size: .5em;
                 max-height: 3em;
                 overflow-y: hidden;
+<<<<<<< HEAD
                 font-family: os-bold;
+=======
+                font-weight: bolder;
+                line-height: 1em;
+>>>>>>> parent of 2e9bc50... px > em
                 padding: 2px;
                 padding-bottom: 4px;
                 display: inline-block;
@@ -262,12 +287,16 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
                 border: none;
                 border-top: 1px solid #FCFEFF;
                 border-bottom: 1px solid #BCCBD6;
-                padding: 0;
+                padding: 3px;
                 margin: 0;
-            }
+            
+                overflow: hidden;
+                font-size: 1.4em;
+                font-weight: 400;
+}
             .groupRosterWell .taskWell .panel-heading h4.panel-title {
-/*                 font-weight: bold; */
-                font-family: os-bold;
+font-weight: 400;
+                
                 color: #8697A3;
                 font-size: .52em;
                 padding: 5px;
@@ -295,7 +324,10 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
                             width: 80%;
                             overflow: hidden;
                             max-height: 2em;
-                        }
+                        
+                            font-weight: 600;
+                            padding: 2px;
+}
                         .groupRosterWell .taskWell .panel-heading h4.panel-title .opener {
                             width: 5%;
                             color: #BCCBD6;
@@ -310,15 +342,17 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
                 border: none;
                 border-left: 1px solid #BCCBD6;
                 border-right: 1px solid #BCCBD6;
-                padding: 5px 2px;
+                padding: 3px;
                 color: #A5CDEB;
-            }
+            
+}
                 .groupRosterWell .taskWell .task a i {
                     color: #A5CDEB;
                 }
                     .groupRosterWell .taskWell .task.submitted a i {
                         color: #2D4759;
-                    }
+                    
+}
                     .groupRosterWell .taskWell .task.witnessed a i {
                         color: #D6E4EB;
                     }
@@ -340,14 +374,31 @@ div[ng-controller='UserGroups']:not(.sidebarOpen) #sidebarContainer {
     background-color: #FFF;
     background-image: none;
 }
-    .chat.suggestion-ready .chatInfo {
-        background-color: #A5CDEB;
+    .chat.suggestion-ready {
+        background-color: rgba(255, 200, 200, .5);
+        padding-top: 2px;
+        padding-bottom: 2px;
+<<<<<<< HEAD
     }
         .chat > .chatArea {
             background-color: #FFF;
             font-size: .85em;
             color: #2D4759;
             padding: 5px 15px 25px 15px;
+=======
+    }
+    .chat:not(:first-child) {
+        margin-top: 7px;
+    }
+        .chat > .chatArea {
+            padding-left: 8px;
+        }
+        .chat .chatTitle {
+            display: inline;
+        }
+        .chat .chatContent {
+            display: inline;
+>>>>>>> parent of 2e9bc50... px > em
         }
             .chat > .chatArea .chatTitle {
                 color: #8DB8D6;
@@ -460,3 +511,16 @@ div[ng-controller='UserGroups'].assessmentOpen .userGroups {
     #editAndSendTemplate .well {
         margin: 0;
     }
+
+
+.userGroup {
+    margin:0 5px;
+}
+
+.rosterPlayers {
+    font-weight:400;
+    
+    font-size: 1.5em;
+    line-height: 70%;
+    padding-bottom: 9px;
+}
